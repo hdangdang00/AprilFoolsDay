@@ -2,46 +2,35 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>카카오톡 링크 메시지 예제</title>
+    <title>장난 송금 메시지</title>
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-    <style>
-      button {
-        padding: 10px 20px;
-        background: #fee500;
-        border: none;
-        border-radius: 8px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-    </style>
   </head>
   <body>
-    <h2>카카오톡으로 송금 메시지 보내기</h2>
-    <button onclick="sendKakaoLink()">카카오톡 공유</button>
+    <h2>카카오톡으로 장난 송금 메시지 보내기</h2>
+    <button onclick="sendLink()">카카오톡 공유</button>
 
     <script>
-      // ✅ 여기에 본인의 JavaScript 키로 교체!
-      Kakao.init("여기에_본인_JavaScript_키_입력")
+      // 🔑 여기에 복사한 JavaScript 키 입력!
+      Kakao.init("1ff8fa920909743f51a5dabf3bbf9ecb")
 
-      function sendKakaoLink() {
+      function sendLink() {
         Kakao.Link.sendDefault({
           objectType: "feed",
           content: {
             title: "송금보내요",
-            description:
-              "1,000,000원을 보냈어요. 받기 전까지는 내역에서 취소할 수 있어요.",
-            imageUrl: "https://i.imgur.com/5N0vAdB.png", // 썸네일 이미지
+            description: "1,000,000원을 보냈어요.",
+            imageUrl: "https://i.imgur.com/5N0vAdB.png",
             link: {
-              mobileWebUrl: "https://yourwebsite.com/fake-receive",
-              webUrl: "https://yourwebsite.com/fake-receive",
+              mobileWebUrl: "https://tldus2355.github.io/aprilfoolsday/",
+              webUrl: "https://tldus2355.github.io/aprilfoolsday/",
             },
           },
           buttons: [
             {
               title: "송금 받기",
               link: {
-                mobileWebUrl: "https://yourwebsite.com/fake-receive",
-                webUrl: "https://yourwebsite.com/fake-receive",
+                mobileWebUrl: "https://tldus2355.github.io/aprilfoolsday/",
+                webUrl: "https://tldus2355.github.io/aprilfoolsday/",
               },
             },
           ],
