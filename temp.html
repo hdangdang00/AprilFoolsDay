@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>송금보내요</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="송금보내요" />
+    <meta
+      property="og:description"
+      content="1,000,000원을 보냈어요. 송금 받기 전까지는 취소할 수 있어요."
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/hdangdang00/AprilFoolsDay/refs/heads/main/image.png"
+    />
+    <meta
+      property="og:url"
+      content="https://hdangdang00.github.io/AprilFoolsDay/"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="송금보내요" />
+    <meta name="twitter:description" content="1,000,000원을 보냈어요." />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/hdangdang00/AprilFoolsDay/refs/heads/main/image.png"
+    />
+
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+      button {
+        padding: 12px 24px;
+        font-size: 16px;
+        background: #fee500;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="sendLink()">카카오톡 공유</button>
+
+    <script>
+      Kakao.init("fe3c45c8d78d36128c583f45d4dafe13")
+
+      function sendLink() {
+        Kakao.Link.sendDefault({
+          objectType: "feed",
+          content: {
+            title: "1,000,000원을 보냈어요.",
+            description:
+              "송금 받기 전까지 보낸 분은 내역 상세화면에서 취소할 수 있어요.",
+            imageUrl:
+              "https://raw.githubusercontent.com/hdangdang00/AprilFoolsDay/refs/heads/main/image.png", // 카카오페이 스타일 썸네일
+            imageWidth: 400,
+            imageHeight: 200,
+            link: {
+              mobileWebUrl: "https://hdangdang00.github.io/AprilFoolsDay/",
+              webUrl: "https://hdangdang00.github.io/AprilFoolsDay/",
+            },
+          },
+          buttons: [
+            {
+              title: "송금 받기",
+              link: {
+                mobileWebUrl: "https://hdangdang00.github.io/AprilFoolsDay/",
+                webUrl: "https://hdangdang00.github.io/AprilFoolsDay/",
+              },
+            },
+          ],
+        })
+      }
+    </script>
+  </body>
+</html>
