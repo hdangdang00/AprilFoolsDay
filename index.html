@@ -2,15 +2,31 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>장난 송금 메시지</title>
+    <title>카카오톡 송금 장난 메시지</title>
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+      button {
+        padding: 12px 24px;
+        font-size: 16px;
+        background: #fee500;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <h2>카카오톡으로 장난 송금 메시지 보내기</h2>
     <button onclick="sendLink()">카카오톡 공유</button>
 
     <script>
-      // 🔑 여기에 복사한 JavaScript 키 입력!
+      // 🔑 본인의 JavaScript 키로 교체하세요!
       Kakao.init("1ff8fa920909743f51a5dabf3bbf9ecb")
 
       function sendLink() {
@@ -18,19 +34,20 @@
           objectType: "feed",
           content: {
             title: "송금보내요",
-            description: "1,000,000원을 보냈어요.",
-            imageUrl: "https://i.imgur.com/5N0vAdB.png",
+            description:
+              "1,000,000원을 보냈어요. 송금 받기 전까지 취소할 수 있어요.",
+            imageUrl: "https://i.imgur.com/5N0vAdB.png", // 카카오페이 스타일 썸네일
             link: {
-              mobileWebUrl: "https://tldus2355.github.io/aprilfoolsday/",
-              webUrl: "https://tldus2355.github.io/aprilfoolsday/",
+              mobileWebUrl: "https://hdangdang00.github.io/AprilFoolsDay/",
+              webUrl: "https://hdangdang00.github.io/AprilFoolsDay/",
             },
           },
           buttons: [
             {
               title: "송금 받기",
               link: {
-                mobileWebUrl: "https://tldus2355.github.io/aprilfoolsday/",
-                webUrl: "https://tldus2355.github.io/aprilfoolsday/",
+                mobileWebUrl: "https://hdangdang00.github.io/AprilFoolsDay/",
+                webUrl: "https://hdangdang00.github.io/AprilFoolsDay/",
               },
             },
           ],
