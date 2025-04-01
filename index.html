@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>송금보내요</title>
+
+    <!-- 미리보기 썸네일용 메타태그 (카톡 링크 카드용) -->
+    <meta property="og:title" content="송금보내요" />
+    <meta
+      property="og:description"
+      content="1,000,000원을 보냈어요. 송금 받기 전까지는 내역에서 취소할 수 있어요."
+    />
+    <meta
+      property="og:image"
+      content="https://t1.kakaocdn.net/kakaopay/mypay/pc/character-kakao.png"
+    />
+    <meta
+      property="og:url"
+      content="https://yourusername.github.io/kakaopay-prank/"
+    />
+
+    <style>
+      body {
+        background: #eee;
+        font-family: "Apple SD Gothic Neo", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .card {
+        width: 320px;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        background: white;
+      }
+      .header {
+        background: #ffe812;
+        padding: 16px;
+        text-align: center;
+      }
+      .header h2 {
+        margin: 0;
+        font-size: 18px;
+      }
+      .header img {
+        width: 60px;
+        margin-top: 8px;
+      }
+      .content {
+        padding: 16px;
+      }
+      .content p {
+        margin: 6px 0;
+      }
+      .btn {
+        width: 100%;
+        padding: 12px;
+        background: #f2f2f2;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 12px;
+      }
+      .btn:hover {
+        background: #ddd;
+      }
+      .footer {
+        padding: 10px 16px;
+        font-size: 12px;
+        background: #f9f9f9;
+        display: flex;
+        align-items: center;
+        color: #555;
+      }
+      .footer img {
+        width: 16px;
+        margin-right: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="header">
+        <h2>송금보내요</h2>
+        <img
+          src="https://t1.kakaocdn.net/kakaopay/mypay/pc/character-kakao.png"
+          alt="카카오캐릭터"
+        />
+      </div>
+      <div class="content">
+        <p><strong>1,000,000원을 보냈어요.</strong></p>
+        <p style="font-size: 14px; color: #555">
+          송금 받기 전까지 보낸 분은 내역 상세화면에서 취소할 수 있어요.
+        </p>
+        <button class="btn" onclick="showPrank()">송금 받기</button>
+      </div>
+      <div class="footer">
+        <img
+          src="https://cdn.icon-icons.com/icons2/2699/PNG/512/kakaopay_logo_icon_168977.png"
+          alt="카카오페이"
+        />
+        카카오페이
+      </div>
+    </div>
+
+    <script>
+      function showPrank() {
+        alert("장난이에요 😆 실제 송금이 아닙니다!")
+      }
+    </script>
+  </body>
+</html>
