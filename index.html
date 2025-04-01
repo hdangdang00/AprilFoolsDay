@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <title>송금보내요</title>
 
-    <!-- ✅ 메타 태그 설정 (카카오톡 미리보기용) -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="송금보내요" />
     <meta
@@ -20,14 +19,13 @@
       content="https://hdangdang00.github.io/AprilFoolsDay/"
     />
 
-    <!-- 트위터 카드도 지원하려면 (선택사항) -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="송금보내요" />
+    <meta name="twitter:description" content="1,000,000원을 보냈어요." />
     <meta
-      name="twitter:description"
-      content="1,000,000원을 보냈어요. 장난입니다 😆"
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/hdangdang00/AprilFoolsDay/refs/heads/main/image.png"
     />
-    <meta name="twitter:image" content="https://i.imgur.com/5N0vAdB.png" />
 
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <style>
@@ -52,8 +50,7 @@
     <button onclick="sendLink()">카카오톡 공유</button>
 
     <script>
-      // 🔑 본인의 JavaScript 키로 교체하세요!
-      Kakao.init("1ff8fa920909743f51a5dabf3bbf9ecb")
+      Kakao.init("90f56a3aab7dcf9e845a78fc733049cb")
 
       function sendLink() {
         Kakao.Link.sendDefault({
@@ -62,7 +59,8 @@
             title: "송금보내요",
             description:
               "1,000,000원을 보냈어요. 송금 받기 전까지 취소할 수 있어요.",
-            imageUrl: "https://i.imgur.com/5N0vAdB.png", // 카카오페이 스타일 썸네일
+            imageUrl:
+              "https://raw.githubusercontent.com/hdangdang00/AprilFoolsDay/refs/heads/main/image.png", // 카카오페이 스타일 썸네일
             link: {
               mobileWebUrl: "https://hdangdang00.github.io/AprilFoolsDay/",
               webUrl: "https://hdangdang00.github.io/AprilFoolsDay/",
